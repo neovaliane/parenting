@@ -135,7 +135,9 @@ const App: React.FC = () => {
           <ScenarioView 
             scenario={currentScenario} 
             onChoose={handleChoice} 
-            isProcessing={loading} 
+            isProcessing={loading}
+            childGender={gameState.childGender}
+            childAge={gameState.age}
           />
         )}
 
@@ -143,7 +145,9 @@ const App: React.FC = () => {
           <FeedbackView 
             outcome={currentOutcome} 
             previousScenario={currentScenario} 
-            onNext={handleNextTurn} 
+            onNext={handleNextTurn}
+            childGender={gameState.childGender}
+            childAge={gameState.age}
           />
         )}
         

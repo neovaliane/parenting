@@ -34,6 +34,8 @@ export interface Scenario {
   id: string;
   title: string;
   description: string;
+  childDialogue?: string; // What the child actually says
+  emotion?: string; // The emotion associated with the dialogue
   context: string; // Internal context for AI
   choices: Choice[];
   imageUrl?: string; // Placeholder URL
@@ -41,6 +43,8 @@ export interface Scenario {
 
 export interface Outcome {
   narrative: string; // Story progression
+  childDialogue?: string; // Child's verbal reaction
+  emotion?: string; // Emotion of the reaction
   feedback: string; // Expert parenting advice/analysis
   statChanges: {
     bonding: number;
